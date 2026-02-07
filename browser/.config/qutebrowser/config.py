@@ -33,7 +33,7 @@ c.fonts.web.family.sans_serif = 'JetBrainsMono Nerd Font'
 
 c.content.blocking.enabled = True
 c.content.blocking.method = 'both'
-c.content.user_stylesheets = ["~/.config/qutebrowser/css/astolfo-sites.css"]
+c.content.user_stylesheets = ["~/.config/qutebrowser/css/teto-sites.css"]
 config.set('content.javascript.can_open_tabs_automatically', True, 'https://*.youtube.com')
 config.set('content.javascript.can_open_tabs_automatically', True, 'https://*.twitch.tv')
 
@@ -43,7 +43,7 @@ c.tabs.indicator.padding = {'top': 0, 'bottom': 0, 'left': 0, 'right': 6}
 c.statusbar.padding = {'top': 6, 'bottom': 6, 'left': 8, 'right': 8}
 c.hints.radius = 4
 c.hints.padding = {'top': 2, 'bottom': 2, 'left': 4, 'right': 4}
-c.hints.border = '1px solid #ff6eb4'
+c.hints.border = '1px solid #e63946'
 c.completion.height = '35%'
 c.completion.scrollbar.padding = 2
 c.completion.scrollbar.width = 8
@@ -54,13 +54,13 @@ c.window.transparent = True
 c.qt.args = ['disable-gpu', 'enable-features=VaapiVideoDecodeLinuxGL']
 c.qt.force_software_rendering = 'chromium'
 
-pink = '#ff6eb4'
-blue = '#7fdbff'
-bg_dark = 'rgba(15, 15, 25, 0.85)'
-bg_darker = 'rgba(10, 10, 20, 0.9)'
-bg_light = 'rgba(25, 25, 40, 0.8)'
-fg = '#e8e8f0'
-fg_dim = '#a0a0b0'
+pink = '#e63946'
+blue = '#f1faee'
+bg_dark = 'rgba(12, 6, 6, 0.85)'
+bg_darker = 'rgba(8, 4, 4, 0.9)'
+bg_light = 'rgba(25, 12, 12, 0.8)'
+fg = '#f1faee'
+fg_dim = '#c0b8b0'
 
 c.colors.statusbar.normal.bg = bg_dark
 c.colors.statusbar.normal.fg = fg

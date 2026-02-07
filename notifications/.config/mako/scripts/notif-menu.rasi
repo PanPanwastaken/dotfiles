@@ -1,9 +1,9 @@
 * {
-    bg: rgba(10, 8, 12, 0.92);
-    fg: rgba(255, 255, 255, 0.85);
-    fg-soft: rgba(255, 255, 255, 0.65);
-    pink: #ff6eb4;
-    blue: #7fdbff;
+    bg: rgba(12, 6, 6, 0.92);
+    fg: rgba(241, 250, 238, 0.85);
+    fg-soft: rgba(241, 250, 238, 0.65);
+    red: #e63946;
+    white: #f1faee;
 
     background-color: transparent;
     text-color: @fg;
@@ -22,7 +22,7 @@ window {
     width: 280px;
     background-color: @bg;
     border: 1px solid;
-    border-color: rgba(255, 110, 180, 0.3);
+    border-color: rgba(230, 57, 70, 0.3);
     border-radius: 12px;
 }
 
@@ -34,7 +34,7 @@ mainbox {
 }
 
 inputbar {
-    background-color: rgba(255, 110, 180, 0.1);
+    background-color: rgba(230, 57, 70, 0.1);
     padding: 8px 12px;
     border-radius: 8px;
     children: [prompt];
@@ -42,7 +42,7 @@ inputbar {
 
 prompt {
     background-color: transparent;
-    text-color: @pink;
+    text-color: @red;
     font: "JetBrainsMono Nerd Font Bold 10";
 }
 
@@ -66,6 +66,6 @@ element-text {
 }
 
 element selected.normal {
-    background-color: rgba(127, 219, 255, 0.15);
-    text-color: @blue;
+    background-color: rgba(241, 250, 238, 0.15);
+    text-color: @white;
 }

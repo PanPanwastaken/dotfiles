@@ -1,16 +1,16 @@
 * {
-    bg-dark: rgba(10, 8, 12, 0.92);
+    bg-dark: rgba(12, 6, 6, 0.92);
 
-    /* Astolfo theme colors */
-    pink: #ff6eb4;
-    arctic: #7fdbff;
-    pink-soft: rgba(255, 110, 180, 0.65);
-    arctic-soft: rgba(127, 219, 255, 0.45);
-    pink-faint: rgba(255, 110, 180, 0.22);
-    arctic-faint: rgba(127, 219, 255, 0.18);
+    /* Teto theme colors */
+    pink: #e63946;
+    arctic: #f1faee;
+    pink-soft: rgba(230, 57, 70, 0.65);
+    arctic-soft: rgba(241, 250, 238, 0.45);
+    pink-faint: rgba(230, 57, 70, 0.22);
+    arctic-faint: rgba(241, 250, 238, 0.18);
 
-    fg: rgba(255, 255, 255, 0.85);
-    fg-soft: rgba(255, 255, 255, 0.65);
+    fg: rgba(241, 250, 238, 0.85);
+    fg-soft: rgba(241, 250, 238, 0.65);
 
     background-color: transparent;
     text-color: @fg;
@@ -27,7 +27,7 @@ window {
     background-color: @bg-dark;
 
     border: 1px solid;
-    border-color: @pink-faint;
+    border-color: @arctic-faint;
     border-radius: 0px;
 }
 
@@ -39,12 +39,12 @@ mainbox {
 }
 
 inputbar {
-    background-color: rgba(20, 16, 20, 0.6);
+    background-color: rgba(20, 10, 10, 0.6);
     padding: 10px 14px;
     border-radius: 10px;
 
     border: 1px solid;
-    border-color: @arctic-faint;
+    border-color: @pink-faint;
 
     children: [prompt, entry];
 }
@@ -59,7 +59,7 @@ prompt {
 entry {
     background-color: transparent;
     text-color: @fg;
-    placeholder-color: rgba(255, 255, 255, 0.3);
+    placeholder-color: rgba(241, 250, 238, 0.3);
 }
 
 listview {
@@ -71,7 +71,7 @@ listview {
 }
 
 scrollbar {
-    background-color: rgba(127, 219, 255, 0.08);
+    background-color: rgba(241, 250, 238, 0.08);
     handle-color: @arctic-soft;
     width: 4px;
     border-radius: 50px;
@@ -94,11 +94,11 @@ element normal.normal {
 }
 
 element alternate.normal {
-    background-color: rgba(127, 219, 255, 0.03);
+    background-color: rgba(241, 250, 238, 0.03);
 }
 
 element selected.normal {
-    background-color: rgba(255, 110, 180, 0.18);
+    background-color: rgba(230, 57, 70, 0.18);
     text-color: @pink;
 }
 
