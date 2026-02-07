@@ -1,0 +1,10 @@
+/* Astolfo Kingdom theme - Rofi colors */
+* {
+    background:     #12100aFF;
+    background-alt: #1e1810FF;
+    background-dim: #12100aB3;
+    foreground:     #FFFFFFFF;
+    selected:       #d4a030FF;
+    active:         #c96878FF;
+    urgent:         #ff5555FF;
+}

@@ -1,0 +1,71 @@
+* {
+    bg: rgba(12, 6, 6, 0.92);
+    fg: rgba(241, 250, 238, 0.85);
+    fg-soft: rgba(241, 250, 238, 0.65);
+    red: #e63946;
+    white: #f1faee;
+
+    background-color: transparent;
+    text-color: @fg;
+    font: "JetBrainsMono Nerd Font 10";
+}
+
+configuration {
+    show-icons: false;
+}
+
+window {
+    location: northeast;
+    anchor: northeast;
+    x-offset: -10;
+    y-offset: 45;
+    width: 280px;
+    background-color: @bg;
+    border: 1px solid;
+    border-color: rgba(230, 57, 70, 0.3);
+    border-radius: 12px;
+}
+
+mainbox {
+    background-color: transparent;
+    children: [inputbar, listview];
+    padding: 8px;
+    spacing: 6px;
+}
+
+inputbar {
+    background-color: rgba(230, 57, 70, 0.1);
+    padding: 8px 12px;
+    border-radius: 8px;
+    children: [prompt];
+}
+
+prompt {
+    background-color: transparent;
+    text-color: @red;
+    font: "JetBrainsMono Nerd Font Bold 10";
+}
+
+listview {
+    background-color: transparent;
+    lines: 6;
+    spacing: 4px;
+    scrollbar: false;
+}
+
+element {
+    background-color: transparent;
+    text-color: @fg-soft;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+}
+
+element selected.normal {
+    background-color: rgba(241, 250, 238, 0.15);
+    text-color: @white;
+}

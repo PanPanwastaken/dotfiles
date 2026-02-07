@@ -1,0 +1,1221 @@
+/* ============================================
+   Astolfo Theme - Site Styles
+   Pink: #ff6eb4 | Arctic Blue: #7fdbff
+
+   Styled sites: YouTube, Google Search, DuckDuckGo, SearXNG, Reddit
+   Other sites (Gmail, GitHub, etc.) use default styling
+   ============================================ */
+
+/* Hide webpage scrollbar globally */
+::-webkit-scrollbar {
+    display: none !important;
+}
+
+:root {
+    --astolfo-pink: #ff6eb4;
+    --astolfo-blue: #7fdbff;
+    --bg-darkest: #0a0a12;
+    --bg-darker: #0f0f19;
+    --bg-dark: #151520;
+    --bg-medium: #1a1a28;
+    --bg-light: #222233;
+    --fg: #e8e8f0;
+    --fg-dim: #a0a0b0;
+    --fg-muted: #666680;
+    --pink-glow: 0 0 4px rgba(255, 110, 180, 0.5);
+    --blue-glow: 0 0 4px rgba(127, 219, 255, 0.5);
+}
+
+/* ============================================
+   YOUTUBE
+   ============================================ */
+
+/* CRT scanlines overlay */
+@keyframes scanline {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 4px; }
+}
+
+/* Main backgrounds with CRT effect */
+html[dark], [dark],
+ytd-app,
+#content.ytd-app,
+ytd-browse,
+ytd-watch-flexy,
+ytd-search {
+    background-color: var(--bg-darkest) !important;
+    background-image:
+        repeating-linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.15) 0px,
+            rgba(0, 0, 0, 0.15) 1px,
+            transparent 1px,
+            transparent 2px
+        ) !important;
+    background-size: 100% 2px !important;
+}
+
+/* Header and sidebars - solid dark */
+ytd-masthead,
+#container.ytd-masthead,
+ytd-mini-guide-renderer,
+ytd-guide-renderer,
+tp-yt-app-drawer,
+ytd-multi-page-menu-renderer,
+ytd-popup-container {
+    background-color: var(--bg-darkest) !important;
+}
+
+/* Force transparent on EVERYTHING else */
+ytd-rich-item-renderer,
+ytd-video-renderer,
+ytd-compact-video-renderer,
+ytd-playlist-panel-renderer,
+ytd-playlist-video-renderer,
+ytd-comment-thread-renderer,
+ytd-comment-renderer,
+ytd-item-section-renderer,
+ytd-rich-grid-row,
+ytd-rich-grid-renderer,
+ytd-two-column-browse-results-renderer,
+ytd-section-list-renderer,
+ytd-shelf-renderer,
+ytd-rich-section-renderer,
+ytd-reel-shelf-renderer,
+ytd-video-meta-block,
+ytd-badge-supported-renderer,
+ytd-thumbnail,
+ytd-watch-metadata,
+ytd-video-owner-renderer,
+ytd-watch-info-text,
+ytd-menu-renderer,
+ytd-menu-popup-renderer,
+ytd-toggle-button-renderer,
+ytd-guide-section-renderer,
+ytd-guide-entry-renderer,
+ytd-topbar-menu-button-renderer,
+ytd-notification-topbar-button-renderer,
+ytd-button-renderer,
+tp-yt-paper-item,
+tp-yt-paper-icon-button,
+yt-icon-button,
+yt-button-shape,
+yt-img-shadow,
+#secondary,
+#related,
+#comments,
+#contents,
+#items,
+#dismissible,
+#details,
+#meta,
+#byline-container,
+#metadata,
+#avatar,
+#avatar-btn,
+#buttons,
+#buttons.ytd-masthead,
+#button,
+#top-row,
+#owner,
+#upload-info,
+#description,
+#info-container,
+#above-the-fold,
+#info.ytd-watch-metadata,
+#search-icon-legacy,
+#voice-search-button,
+#container.ytd-searchbox,
+#search-container,
+.ytd-rich-grid-media,
+.ytd-rich-item-renderer,
+.yt-spec-button-shape-next,
+.yt-spec-icon-button-shape-next,
+.yt-core-image,
+button,
+[class*="button"],
+[class*="menu"] {
+    background-color: transparent !important;
+    background: transparent !important;
+}
+
+/* Kill hover backgrounds completely */
+ytd-rich-item-renderer:hover,
+ytd-video-renderer:hover,
+ytd-compact-video-renderer:hover,
+ytd-comment-renderer:hover,
+ytd-toggle-button-renderer:hover,
+ytd-button-renderer:hover,
+ytd-menu-renderer:hover,
+yt-icon-button:hover,
+tp-yt-paper-icon-button:hover,
+.yt-spec-button-shape-next:hover,
+.yt-spec-icon-button-shape-next:hover,
+button:hover,
+#dismissible:hover,
+[class*="button"]:hover {
+    background-color: transparent !important;
+    background: transparent !important;
+}
+
+/* Sidebar hover - subtle pink */
+ytd-guide-entry-renderer:hover,
+ytd-guide-entry-renderer[active],
+tp-yt-paper-item:hover {
+    background-color: rgba(255, 110, 180, 0.1) !important;
+}
+
+/* Watch page - unified solid background (override transparent) */
+ytd-watch-flexy #columns,
+ytd-watch-flexy #primary,
+ytd-watch-flexy #secondary,
+ytd-watch-flexy #primary-inner,
+ytd-watch-flexy #below,
+ytd-watch-flexy ytd-comments,
+ytd-watch-flexy #comments,
+ytd-watch-flexy #related,
+ytd-watch-flexy ytd-watch-metadata,
+ytd-watch-flexy #above-the-fold,
+ytd-watch-flexy #bottom-row,
+ytd-watch-flexy #info-contents,
+ytd-watch-flexy #meta-contents,
+ytd-watch-flexy ytd-expander,
+ytd-watch-flexy #description,
+ytd-watch-flexy #description-inner,
+ytd-watch-flexy ytd-text-inline-expander,
+ytd-watch-flexy ytd-item-section-renderer,
+ytd-watch-flexy ytd-comment-thread-renderer,
+ytd-watch-flexy ytd-engagement-panel-section-list-renderer,
+#player-container-outer,
+#player-container-inner,
+#player-container {
+    background-color: var(--bg-darkest) !important;
+}
+
+/* YouTube icons - Pink (menu, guide, sidebar) */
+#guide-icon yt-icon,
+ytd-guide-entry-renderer yt-icon,
+ytd-mini-guide-entry-renderer yt-icon,
+ytd-menu-renderer yt-icon,
+tp-yt-paper-icon-button yt-icon,
+#more-actions yt-icon {
+    fill: var(--astolfo-pink) !important;
+    color: var(--astolfo-pink) !important;
+}
+
+/* YouTube icons - Blue (notifications, search, create, settings) */
+ytd-notification-topbar-button-renderer yt-icon,
+ytd-notification-topbar-button-renderer svg,
+#search-icon-legacy yt-icon,
+#voice-search-button yt-icon,
+ytd-topbar-menu-button-renderer yt-icon,
+#avatar-btn yt-icon,
+.ytd-searchbox yt-icon,
+yt-icon-button yt-icon,
+ytd-toggle-button-renderer yt-icon {
+    fill: var(--astolfo-blue) !important;
+    color: var(--astolfo-blue) !important;
+}
+
+/* YouTube logo - blue */
+ytd-topbar-logo-renderer svg path,
+ytd-topbar-logo-renderer yt-icon svg,
+#logo-icon svg {
+    fill: var(--astolfo-blue) !important;
+}
+
+/* Search bar */
+#search-form,
+#search-input,
+ytd-searchbox {
+    background-color: transparent !important;
+    border-color: var(--bg-light) !important;
+}
+
+input#search,
+#search-input input,
+.ytd-searchbox input,
+.gsfi,
+.gstl_50,
+.sbdd_a,
+.sbdd_b,
+#sb_ifc50,
+#search-input,
+.search-active #container.ytd-searchbox,
+ytd-searchbox[has-focus] #container,
+ytd-searchbox #container,
+#search-form .a4bIc,
+.sbpqtfc,
+.aajZCb,
+.RNNXgb {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: var(--fg) !important;
+}
+
+#search-form {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+#search-form:focus-within {
+    border-color: var(--astolfo-pink) !important;
+    box-shadow: 0 0 10px rgba(255, 110, 180, 0.5) !important;
+}
+
+/* Subscribe button - transparent with pink border, round */
+#subscribe-button ytd-subscribe-button-renderer,
+yt-button-shape button[aria-label="Subscribe"],
+ytd-subscribe-button-renderer,
+ytd-subscribe-button-renderer button,
+#subscribe-button button {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 2px solid var(--astolfo-pink) !important;
+    border-radius: 50px !important;
+    box-shadow: none !important;
+}
+
+#subscribe-button button yt-formatted-string,
+#subscribe-button span,
+ytd-subscribe-button-renderer yt-formatted-string,
+ytd-subscribe-button-renderer span,
+button[aria-label="Subscribe"] span {
+    color: var(--astolfo-pink) !important;
+    text-shadow: none !important;
+    animation: none !important;
+}
+
+/* Join button - transparent with blue border, round */
+#sponsor-button ytd-button-renderer,
+#sponsor-button button,
+yt-button-shape button[aria-label*="Join"],
+button[aria-label*="Join"] {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 2px solid var(--astolfo-blue) !important;
+    border-radius: 50px !important;
+}
+
+#sponsor-button span,
+button[aria-label*="Join"] span {
+    color: var(--astolfo-blue) !important;
+    animation: none !important;
+}
+
+/* Share, like, dislike, three dots - no border */
+button[aria-label="Share"],
+button[aria-label="like this video"],
+button[aria-label="Dislike this video"],
+button[aria-label="More actions"],
+ytd-button-renderer.ytd-menu-renderer button,
+#top-level-buttons-computed button,
+ytd-menu-renderer button,
+ytd-toggle-button-renderer button,
+yt-button-shape button,
+#actions button,
+#actions ytd-button-renderer,
+#actions ytd-toggle-button-renderer,
+#menu button,
+#menu ytd-menu-renderer {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+button[aria-label="Share"] span,
+button[aria-label="Share"] yt-formatted-string {
+    color: var(--astolfo-blue) !important;
+    animation: none !important;
+}
+
+/* Top bar icons and elements - no borders */
+ytd-masthead *,
+ytd-masthead button,
+ytd-masthead yt-icon-button,
+ytd-masthead ytd-button-renderer,
+ytd-topbar-menu-button-renderer,
+ytd-topbar-menu-button-renderer *,
+#buttons.ytd-masthead button,
+#end #buttons button,
+#voice-search-button,
+#search-icon-legacy {
+    border: none !important;
+}
+
+/* Animated gradient keyframes - subtle */
+@keyframes astolfo-gradient {
+    0%, 100% {
+        color: #ff6eb4;
+        text-shadow: 0 0 6px rgba(255, 110, 180, 0.4);
+    }
+    50% {
+        color: #7fdbff;
+        text-shadow: 0 0 6px rgba(127, 219, 255, 0.4);
+    }
+}
+
+/* Video titles - Animated glowing gradient (home, recommendations, search, everywhere) */
+#video-title,
+#video-title-link,
+yt-formatted-string#video-title,
+yt-formatted-string.ytd-rich-grid-media,
+h3.ytd-rich-grid-media,
+.title.ytd-rich-grid-media,
+span#video-title,
+span.ytd-rich-grid-media#video-title,
+a#video-title-link,
+ytd-rich-item-renderer #video-title,
+ytd-rich-item-renderer yt-formatted-string,
+ytd-rich-grid-media #video-title,
+ytd-rich-grid-media yt-formatted-string#video-title,
+ytd-compact-video-renderer #video-title,
+ytd-video-renderer #video-title,
+ytd-grid-video-renderer #video-title,
+ytd-playlist-video-renderer #video-title,
+#video-title.ytd-rich-grid-media,
+#contents ytd-rich-item-renderer #video-title,
+ytd-browse #video-title {
+    animation: astolfo-gradient 3s ease-in-out infinite !important;
+    color: var(--astolfo-pink) !important;
+}
+
+#video-title:hover,
+a#video-title-link:hover,
+ytd-rich-item-renderer #video-title:hover {
+    animation: none !important;
+    color: #ffffff !important;
+    text-shadow: 0 0 6px rgba(255, 110, 180, 0.5) !important;
+}
+
+/* Watch page title - Animated glowing gradient */
+h1.ytd-watch-metadata yt-formatted-string,
+h1.ytd-video-primary-info-renderer,
+.title.ytd-video-primary-info-renderer,
+h1 yt-formatted-string.ytd-watch-metadata {
+    animation: astolfo-gradient 4s ease-in-out infinite !important;
+}
+
+/* Channel names - Glowy blue */
+#channel-name a,
+ytd-channel-name a,
+#owner-name a,
+#text.ytd-channel-name,
+yt-formatted-string#text.ytd-channel-name,
+.ytd-channel-name,
+a.yt-simple-endpoint.style-scope.yt-formatted-string {
+    color: var(--astolfo-blue) !important;
+    text-shadow: var(--blue-glow) !important;
+}
+
+/* View count, date */
+#metadata-line span,
+#info-strings span,
+.ytd-video-meta-block,
+#metadata-line,
+.inline-metadata-item {
+    color: var(--fg-dim) !important;
+}
+
+/* Chips/pills - category buttons everywhere */
+yt-chip-cloud-chip-renderer,
+yt-chip-cloud-chip-renderer *,
+yt-chip-cloud-renderer,
+yt-chip-cloud-renderer *,
+ytd-feed-filter-chip-bar-renderer,
+ytd-feed-filter-chip-bar-renderer *,
+#chips-wrapper,
+#chips-wrapper *,
+#scroll-container.ytd-feed-filter-chip-bar-renderer,
+#scroll-container.ytd-feed-filter-chip-bar-renderer *,
+ytd-watch-flexy yt-chip-cloud-chip-renderer,
+ytd-watch-flexy yt-chip-cloud-chip-renderer *,
+iron-selector yt-chip-cloud-chip-renderer,
+iron-selector yt-chip-cloud-chip-renderer *,
+yt-chip-cloud-chip-renderer yt-formatted-string,
+yt-chip-cloud-chip-renderer #chip,
+yt-chip-cloud-chip-renderer #text,
+yt-chip-cloud-chip-renderer .yt-formatted-string,
+yt-chip-cloud-chip-renderer .chip-container {
+    background: none !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+yt-chip-cloud-chip-renderer {
+    border: 1px solid var(--fg-muted) !important;
+    border-radius: 12px !important;
+    color: var(--fg-dim) !important;
+}
+
+yt-chip-cloud-chip-renderer:hover {
+    border-color: var(--astolfo-blue) !important;
+}
+
+yt-chip-cloud-chip-renderer:hover yt-formatted-string,
+yt-chip-cloud-chip-renderer:hover span,
+yt-chip-cloud-chip-renderer:hover * {
+    color: var(--astolfo-blue) !important;
+}
+
+yt-chip-cloud-chip-renderer[selected] {
+    border-color: var(--astolfo-pink) !important;
+}
+
+yt-chip-cloud-chip-renderer[selected] yt-formatted-string,
+yt-chip-cloud-chip-renderer[selected] span,
+yt-chip-cloud-chip-renderer[selected] * {
+    color: var(--astolfo-pink) !important;
+}
+
+yt-chip-cloud-chip-renderer yt-formatted-string,
+yt-chip-cloud-chip-renderer span {
+    color: var(--fg-dim) !important;
+}
+
+/* YouTube video player buttons - no borders */
+.ytp-button,
+.ytp-button *,
+.ytp-chrome-bottom *,
+.ytp-chrome-top *,
+.ytp-chrome-controls *,
+.ytp-left-controls *,
+.ytp-right-controls *,
+.ytp-settings-button,
+.ytp-fullscreen-button,
+.ytp-miniplayer-button,
+.ytp-subtitles-button,
+.ytp-play-button,
+.ytp-mute-button,
+.ytp-volume-panel,
+.ytp-time-display,
+#movie_player button,
+#movie_player * button {
+    border: none !important;
+    background: transparent !important;
+}
+
+/* Hashtags and links below description */
+a.yt-simple-endpoint.style-scope.yt-formatted-string,
+ytd-watch-metadata a.yt-simple-endpoint,
+#description a,
+#info a,
+.yt-core-attributed-string a,
+yt-attributed-string a,
+ytd-video-description-transcript-section-renderer a,
+ytd-metadata-row-renderer a,
+ytd-rich-metadata-renderer,
+ytd-macro-markers-list-renderer a,
+#structured-description a {
+    color: var(--astolfo-blue) !important;
+    background: transparent !important;
+}
+
+#description a:hover,
+.yt-core-attributed-string a:hover {
+    color: var(--astolfo-pink) !important;
+}
+
+/* Auto-generated buttons/pills in description */
+ytd-rich-metadata-renderer,
+ytd-video-description-music-section-renderer,
+ytd-video-description-infocards-section-renderer,
+ytd-video-description-transcript-section-renderer,
+ytd-horizontal-card-list-renderer,
+ytd-macro-markers-list-renderer,
+ytd-structured-description-content-renderer {
+    background-color: var(--bg-dark) !important;
+    border-color: var(--bg-light) !important;
+}
+
+/* Chapter markers and timestamps */
+ytd-macro-markers-list-item-renderer,
+ytd-engagement-panel-section-list-renderer,
+.ytp-chapter-container {
+    background-color: var(--bg-dark) !important;
+}
+
+ytd-macro-markers-list-item-renderer:hover {
+    background-color: rgba(127, 219, 255, 0.1) !important;
+}
+
+/* Metadata pills (game info, music info, etc) */
+ytd-rich-metadata-renderer #thumbnail-container,
+ytd-rich-metadata-renderer #content {
+    background: var(--bg-dark) !important;
+}
+
+ytd-rich-metadata-renderer #title,
+ytd-rich-metadata-renderer .ytd-rich-metadata-renderer {
+    color: var(--astolfo-pink) !important;
+}
+
+ytd-rich-metadata-renderer #subtitle,
+ytd-rich-metadata-renderer .subtitle {
+    color: var(--fg-dim) !important;
+}
+
+/* Progress bar - Glowy pink */
+.ytp-play-progress,
+.ytp-swatch-background-color {
+    background: var(--astolfo-pink) !important;
+    box-shadow: 0 0 6px rgba(255, 110, 180, 0.8) !important;
+}
+
+/* HIDE YOUTUBE SHORTS */
+ytd-rich-section-renderer:has(ytd-rich-shelf-renderer[is-shorts]),
+ytd-reel-shelf-renderer,
+ytd-rich-shelf-renderer[is-shorts],
+[is-shorts],
+ytd-guide-entry-renderer:has(a[title="Shorts"]),
+ytd-mini-guide-entry-renderer:has(a[title="Shorts"]),
+ytd-reel-item-renderer,
+ytd-shorts,
+a[title="Shorts"],
+ytd-grid-video-renderer:has(a[href*="/shorts/"]),
+ytd-video-renderer:has(a[href*="/shorts/"]),
+ytd-compact-video-renderer:has(a[href*="/shorts/"]) {
+    display: none !important;
+}
+
+/* ============================================
+   GOOGLE
+   ============================================ */
+
+/* Main backgrounds */
+html:has(input[name="q"]),
+body:has(input[name="q"]) {
+    background-color: var(--bg-darkest) !important;
+}
+
+.sfbg,
+#searchform,
+.o3j99,
+.minidiv,
+#rcnt,
+#center_col,
+#rhs,
+.TQc1id,
+.kp-wholepage,
+#appbar,
+.dodTBe,
+.card-section,
+.knowledge-panel,
+#main,
+#cnt,
+.RNNXgb,
+.aajZCb,
+.lJ9FBc,
+.cF4V5c,
+.SDkEP,
+.logo {
+    background-color: var(--bg-darkest) !important;
+}
+
+/* Search results - transparent */
+.g,
+.MjjYud,
+.N54PNb,
+.eA0Zlc,
+.hlcw0c,
+.uEierd,
+.v7W49e,
+.VwiC3b,
+.kvH3mc {
+    background-color: transparent !important;
+    background: transparent !important;
+}
+
+/* Search bar */
+.gLFyf,
+input[name="q"],
+.a4bIc,
+textarea {
+    background-color: var(--bg-dark) !important;
+    border-color: var(--bg-light) !important;
+    color: var(--fg) !important;
+}
+
+.RNNXgb:focus-within,
+.SDkEP:focus-within {
+    border-color: var(--astolfo-pink) !important;
+    box-shadow: 0 0 10px rgba(255, 110, 180, 0.5) !important;
+}
+
+/* Result titles - Subtle pink */
+.LC20lb,
+h3.LC20lb,
+a h3 {
+    color: var(--astolfo-pink) !important;
+    text-shadow: none !important;
+}
+
+.LC20lb:hover,
+h3.LC20lb:hover {
+    color: var(--astolfo-blue) !important;
+    text-shadow: none !important;
+}
+
+/* Result URLs - Blue */
+.VuuXrf,
+cite,
+.qLRx3b,
+.NJjxre,
+.tjvcx,
+.apx8Vc {
+    color: var(--astolfo-blue) !important;
+    text-shadow: none !important;
+}
+
+/* Result descriptions */
+.VwiC3b,
+.lEBKkf,
+.IsZvec,
+.yXK7lf {
+    color: var(--fg-dim) !important;
+}
+
+/* Navigation tabs */
+.hdtb-mitem,
+.hdtb-mitem a {
+    color: var(--fg) !important;
+}
+
+.hdtb-mitem.hdtb-msel {
+    border-bottom-color: var(--astolfo-pink) !important;
+    color: var(--astolfo-pink) !important;
+    text-shadow: 0 0 6px rgba(255, 110, 180, 0.5) !important;
+}
+
+/* Google icons - pink */
+.google-icon svg,
+.OZ6mJd-NBgM4e svg {
+    fill: var(--astolfo-pink) !important;
+}
+
+/* ============================================
+   DUCKDUCKGO
+   ============================================ */
+
+html:has(.search__input),
+body:has(.search__input),
+.body--html,
+.site-wrapper,
+.header,
+.header__search-wrap,
+.search,
+.search--adv,
+.search__autocomplete,
+.search-filters-wrap,
+.results--main,
+.result,
+.results,
+.module,
+.module--carousel,
+.zci,
+.zci__main,
+.zci__body,
+.tile,
+.tile--c,
+.card,
+.related-searches,
+.feedback-prompt,
+.footer,
+.search-form,
+.search-form__container {
+    background-color: var(--bg-darkest) !important;
+    color: var(--fg) !important;
+}
+
+/* Search bar */
+.search__input,
+.searchbox_input__bEGm3,
+input[type="text"],
+.search-form__input {
+    background-color: var(--bg-dark) !important;
+    border-color: var(--bg-light) !important;
+    color: var(--fg) !important;
+}
+
+.search__input:focus,
+.searchbox_input__bEGm3:focus,
+.search-form__input:focus {
+    border-color: var(--astolfo-pink) !important;
+    box-shadow: 0 0 10px rgba(255, 110, 180, 0.5) !important;
+}
+
+/* Result titles - Pink */
+.result__a,
+.result__title a,
+a[data-testid="result-title-a"],
+.eVNpHGjtxRBq_gLOfGDr,
+.Ee2e7Rb1lu1u_LHbZCgR {
+    color: var(--astolfo-pink) !important;
+    text-shadow: none !important;
+}
+
+.result__a:hover,
+a[data-testid="result-title-a"]:hover {
+    color: var(--astolfo-blue) !important;
+    text-shadow: none !important;
+}
+
+/* URLs - Blue */
+.result__url,
+a[data-testid="result-extras-url-link"],
+.Wo6ZAEmESLNUuWBkbMxx {
+    color: var(--astolfo-blue) !important;
+    text-shadow: none !important;
+}
+
+/* Descriptions */
+.result__snippet,
+a[data-testid="result-snippet"],
+.kY2IgmnCmOGjharHErah {
+    color: var(--fg-dim) !important;
+}
+
+/* Buttons and filters */
+.dropdown,
+.dropdown__button,
+.search-filter,
+.tag,
+.btn,
+.zcm__item {
+    background-color: var(--bg-light) !important;
+    color: var(--fg) !important;
+    border-color: var(--bg-light) !important;
+}
+
+.dropdown__button:hover,
+.btn:hover,
+.zcm__item:hover {
+    background-color: rgba(255, 110, 180, 0.2) !important;
+}
+
+.zcm__item--selected,
+.is-active {
+    background-color: var(--astolfo-pink) !important;
+    color: white !important;
+    box-shadow: none !important;
+}
+
+/* DuckDuckGo icons */
+.search__icon svg,
+.zcm__icon svg {
+    fill: var(--astolfo-pink) !important;
+}
+
+/* ============================================
+   SEARXNG
+   ============================================ */
+
+html:has(#q),
+body:has(#q),
+.searxng-navbar,
+#main_preferences,
+#search,
+#results,
+.result,
+.result-default,
+.result-images,
+.infobox,
+#sidebar,
+.search_categories,
+.category,
+#preferences,
+.preferences_back,
+.advanced,
+#search_form,
+.search_filters,
+#main_results,
+.result-content,
+.engines {
+    background-color: var(--bg-darkest) !important;
+    color: var(--fg) !important;
+}
+
+/* Search bar */
+#q,
+.search_box input,
+#search_input,
+.search-input {
+    background-color: var(--bg-dark) !important;
+    border-color: var(--bg-light) !important;
+    color: var(--fg) !important;
+}
+
+#q:focus,
+#search_input:focus {
+    border-color: var(--astolfo-pink) !important;
+    box-shadow: 0 0 10px rgba(255, 110, 180, 0.5) !important;
+}
+
+/* Result titles - Pink */
+.result h3 a,
+.result-title,
+.result_header a,
+h4.result_header a,
+.result-link {
+    color: var(--astolfo-pink) !important;
+    text-shadow: none !important;
+}
+
+.result h3 a:hover,
+.result_header a:hover,
+.result-link:hover {
+    color: var(--astolfo-blue) !important;
+    text-shadow: none !important;
+}
+
+/* URLs - Blue */
+.result .url,
+.result-url,
+.result_url,
+.external-link,
+.cache_link {
+    color: var(--astolfo-blue) !important;
+    text-shadow: none !important;
+}
+
+/* Descriptions */
+.result .content,
+.result-content,
+.result_content,
+p.result-content {
+    color: var(--fg-dim) !important;
+}
+
+/* Category buttons */
+.search_categories button,
+.category,
+#categories button,
+.btn,
+#categories_container button {
+    background-color: var(--bg-light) !important;
+    color: var(--fg) !important;
+    border-color: var(--bg-light) !important;
+}
+
+.search_categories button:hover,
+.category:hover {
+    background-color: rgba(255, 110, 180, 0.2) !important;
+}
+
+.search_categories button.selected,
+.category.selected,
+button.active {
+    background-color: var(--astolfo-pink) !important;
+    color: white !important;
+    box-shadow: none !important;
+}
+
+/* SearXNG icons */
+.searxng-navbar svg,
+#search_form svg {
+    fill: var(--astolfo-pink) !important;
+}
+
+/* ============================================
+   REDDIT
+   ============================================ */
+
+/* New Reddit & shreddit */
+html:has(shreddit-app),
+body:has(shreddit-app),
+shreddit-app,
+.App,
+.ListingLayout-outerContainer,
+.ListingLayout-backgroundContainer,
+.Post,
+.Comment,
+.SubredditVars-r-all,
+.sidebar,
+.sidebar-grid,
+._1OVBBWLtHoSPfGCRaPzpTf,
+._3ozFtOe6WpJEMUtxDOIvtU,
+.rpBJOHq2PR60pnwJlUyP0,
+[data-testid="post-container"],
+[data-testid="subreddit-sidebar"],
+.grid,
+.main-container,
+header,
+nav,
+.top-matter,
+faceplate-partial {
+    background-color: var(--bg-darkest) !important;
+    color: var(--fg) !important;
+}
+
+/* Posts */
+.Post,
+.scrollerItem,
+article,
+[data-testid="post-container"],
+shreddit-post,
+.thing,
+.link {
+    background-color: var(--bg-dark) !important;
+    border-color: var(--bg-light) !important;
+}
+
+.Post:hover,
+article:hover,
+shreddit-post:hover,
+.thing:hover {
+    border-color: var(--astolfo-pink) !important;
+    box-shadow: 0 0 8px rgba(255, 110, 180, 0.2) !important;
+}
+
+/* Post titles - Pink */
+h1, h2,
+a[data-click-id="body"],
+._eYtD2XCVieq6emjKBH3m,
+.SQnoC3ObvgnGjWt90zD9Z,
+a[slot="title"],
+.title a,
+.entry .title a,
+[slot="title"] {
+    color: var(--astolfo-pink) !important;
+    text-shadow: none !important;
+}
+
+a[data-click-id="body"]:hover,
+a[slot="title"]:hover,
+[slot="title"]:hover {
+    color: var(--astolfo-blue) !important;
+    text-shadow: none !important;
+}
+
+/* Subreddit/user names - Blue */
+a[data-click-id="subreddit"],
+a[data-click-id="user"],
+._2mHuuvyV9doV3zwbZPtIPG,
+.subreddit,
+.author,
+a[href^="/r/"],
+a[href^="/u/"],
+faceplate-tracker a[href^="/r/"],
+[slot="subreddit-name"],
+[slot="author-name"] {
+    color: var(--astolfo-blue) !important;
+    text-shadow: none !important;
+}
+
+/* Vote buttons */
+button[aria-label*="upvote"],
+button[aria-label*="downvote"],
+.voteButton,
+.arrow {
+    color: var(--fg-dim) !important;
+}
+
+button[aria-label*="upvote"]:hover,
+.arrow.up:hover {
+    color: var(--astolfo-pink) !important;
+}
+
+button[aria-label*="downvote"]:hover,
+.arrow.down:hover {
+    color: var(--astolfo-blue) !important;
+}
+
+[aria-pressed="true"][aria-label*="upvote"],
+.arrow.upmod {
+    color: var(--astolfo-pink) !important;
+}
+
+[aria-pressed="true"][aria-label*="downvote"],
+.arrow.downmod {
+    color: var(--astolfo-blue) !important;
+}
+
+/* Search bar */
+input[type="search"],
+input[type="text"],
+#search-input,
+.search-input,
+faceplate-search-input input {
+    background-color: var(--bg-dark) !important;
+    border-color: var(--bg-light) !important;
+    color: var(--fg) !important;
+}
+
+input:focus {
+    border-color: var(--astolfo-pink) !important;
+    box-shadow: 0 0 10px rgba(255, 110, 180, 0.5) !important;
+}
+
+/* Comments */
+.Comment,
+._3sf33-9rVAO_v4y0pIW_CH,
+[data-testid="comment"],
+.comment,
+.entry,
+shreddit-comment {
+    background-color: transparent !important;
+    border-left-color: var(--bg-light) !important;
+}
+
+.Comment:hover,
+.comment:hover,
+shreddit-comment:hover {
+    border-left-color: var(--astolfo-pink) !important;
+}
+
+/* Buttons */
+button,
+.button,
+._10K5i7NW6qcm-UoCtpB3aK,
+.pill {
+    background-color: var(--bg-light) !important;
+    color: var(--fg) !important;
+    border-color: var(--bg-light) !important;
+}
+
+button:hover,
+.button:hover {
+    background-color: rgba(255, 110, 180, 0.2) !important;
+}
+
+/* Join/subscribe buttons */
+button[aria-label*="Join"],
+button[aria-label*="Subscribe"],
+._2iuoyPiKHN3kfOoeIQalDT,
+shreddit-join-button button {
+    background-color: var(--astolfo-pink) !important;
+    color: white !important;
+    box-shadow: none !important;
+}
+
+/* Meta info */
+._1RIl585IYPW6cmNXwgRz0J,
+.FHCV02u6Cp2zYL0fhQPsO,
+.created-time,
+.score,
+.comments,
+.bylink,
+faceplate-timeago {
+    color: var(--fg-muted) !important;
+}
+
+/* Old Reddit */
+.side,
+.content,
+.footer-parent,
+#header,
+#header-bottom-left,
+.tabmenu li a,
+.drop-choices,
+.menuarea {
+    background-color: var(--bg-darkest) !important;
+    color: var(--fg) !important;
+}
+
+/* Reddit icons */
+svg,
+shreddit-app svg,
+faceplate-tracker svg {
+    fill: var(--astolfo-pink) !important;
+}
+
+/* ============================================
+   QUTEBROWSER INTERNAL PAGES (history, etc)
+   ============================================ */
+
+/* Base styling for qute:// pages - scoped to history */
+body:has(#hist-container) {
+    background-color: var(--bg-darkest) !important;
+    color: var(--fg) !important;
+    font-family: 'JetBrainsMono Nerd Font', monospace !important;
+}
+
+/* History page elements */
+#hist-container,
+#hist-container table,
+#hist-container tbody,
+#hist-container tr,
+#hist-container td,
+#hist-container th {
+    background-color: var(--bg-darkest) !important;
+    color: var(--fg) !important;
+    border-color: var(--bg-light) !important;
+}
+
+/* History entries */
+#hist-container tr:nth-child(even) {
+    background-color: var(--bg-dark) !important;
+}
+
+#hist-container tr:nth-child(odd) {
+    background-color: var(--bg-darkest) !important;
+}
+
+#hist-container tr:hover {
+    background-color: rgba(255, 110, 180, 0.1) !important;
+}
+
+/* History links */
+#hist-container a {
+    color: var(--astolfo-pink) !important;
+    text-decoration: none !important;
+    transition: color 0.2s ease !important;
+}
+
+#hist-container a:hover {
+    color: var(--astolfo-blue) !important;
+}
+
+/* Timestamps */
+#hist-container td:first-child {
+    color: var(--fg-muted) !important;
+}
+
+/* Search input */
+#hist-container input[type="text"],
+#hist-container input[type="search"] {
+    background-color: var(--bg-dark) !important;
+    border: 1px solid var(--bg-light) !important;
+    border-radius: 8px !important;
+    color: var(--fg) !important;
+    padding: 8px 12px !important;
+}
+
+#hist-container input[type="text"]:focus,
+#hist-container input[type="search"]:focus {
+    border-color: var(--astolfo-pink) !important;
+    outline: none !important;
+    box-shadow: 0 0 8px rgba(255, 110, 180, 0.3) !important;
+}
+
+/* Headers */
+#hist-container h1,
+#hist-container h2,
+#hist-container h3,
+#hist-container th {
+    color: var(--astolfo-blue) !important;
+    border-bottom: 1px solid var(--bg-light) !important;
+    padding-bottom: 8px !important;
+}
+
+/* Buttons */
+#hist-container button,
+#hist-container input[type="button"],
+#hist-container input[type="submit"] {
+    background: transparent !important;
+    border: 1px solid var(--astolfo-pink) !important;
+    border-radius: 16px !important;
+    color: var(--astolfo-pink) !important;
+    padding: 6px 16px !important;
+    cursor: pointer !important;
+}
+
+#hist-container button:hover,
+#hist-container input[type="button"]:hover,
+#hist-container input[type="submit"]:hover {
+    border-color: var(--astolfo-blue) !important;
+    color: var(--astolfo-blue) !important;
+}
+

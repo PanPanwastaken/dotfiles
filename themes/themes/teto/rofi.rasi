@@ -1,0 +1,10 @@
+/* Teto theme - Rofi colors */
+* {
+    background:     #1a0a0aFF;
+    background-alt: #2d1515FF;
+    background-dim: #1a0a0aB3;
+    foreground:     #f1faeeFF;
+    selected:       #e63946FF;
+    active:         #f1faeeFF;
+    urgent:         #ff4d5aFF;
+}

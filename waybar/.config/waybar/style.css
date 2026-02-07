@@ -1,0 +1,191 @@
+@import "theme.css";
+
+* {
+  border: none;
+  border-radius: 0;
+  font-family: JetBrainsMono Nerd Font, JetBrainsMono NF, monospace;
+  font-size: 14px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: @bg-bar;
+  color: @text-main;
+}
+
+#workspaces,
+#taskbar,
+#clock,
+#tray {
+  background: @bg-module;
+  margin: 3px 2px;
+  padding: 2px 10px;
+  border-radius: 6px;
+  color: @text-main;
+  border: 2px solid @border-primary;
+  text-shadow: 0 0 8px currentColor;
+}
+
+#right {
+  background: @bg-module;
+  margin: 3px 2px;
+  padding: 2px 8px;
+  border-radius: 6px;
+  border: 2px solid @border-primary;
+
+}
+
+#right > * {
+  background: transparent;
+  border: none;
+  margin: 0 8px;
+  padding: 2px 12px;
+  border-radius: 0;
+
+}
+
+#workspaces {
+  border: 2px solid @border-secondary;
+}
+
+#workspaces button {
+  background: transparent;
+  padding: 0 6px;
+  margin: 0 2px;
+  border-radius: 4px;
+  color: @arctic-light;
+  text-shadow: 0 0 8px @arctic-blue;
+  transition: all 0.2s ease;
+}
+
+#workspaces button:hover {
+  background: @btn-hover-bg;
+  color: @arctic-cyan;
+  text-shadow: 0 0 12px @arctic-cyan, 0 0 20px @arctic-blue;
+}
+
+#workspaces button.active {
+  background: @btn-active-bg;
+  color: @pink-light;
+  text-shadow: 0 0 5px @pink-hot, 0 0 10px @pink-glow;
+  box-shadow: 0 0 10px @btn-active-bg;
+}
+
+#workspaces button.urgent {
+  background: @btn-urgent-bg;
+  color: @pink-hot;
+  text-shadow: 0 0 15px @pink-hot;
+  box-shadow: 0 0 15px @btn-urgent-bg;
+}
+
+#taskbar button {
+  background: transparent;
+  padding: 2px 6px;
+  margin: 0 2px;
+  border-radius: 4px;
+  color: @arctic-light;
+  text-shadow: 0 0 8px @arctic-blue;
+  transition: all 0.2s ease;
+}
+
+#taskbar button:hover {
+  background: @btn-hover-bg;
+  text-shadow: 0 0 12px @arctic-cyan;
+}
+
+#taskbar button.active {
+  background: @btn-active-bg;
+  color: @pink-light;
+  text-shadow: 0 0 12px @pink-hot, 0 0 18px @pink-glow;
+}
+
+#clock {
+  color: @pink-light;
+  font-weight: 600;
+  text-shadow: 0 0 10px @pink-hot, 0 0 20px @pink-glow;
+  border: 2px solid @border-primary-bright;
+}
+
+#backlight {
+  color: @arctic-light;
+  text-shadow: 0 0 5px @arctic-blue, 0 0 10px @arctic-cyan;
+}
+
+#cpu {
+  color: @pink-light;
+  text-shadow: 0 0 5px @pink-hot, 0 0 10px @pink-glow;
+}
+
+#memory {
+  color: @arctic-light;
+  text-shadow: 0 0 5px @arctic-blue, 0 0 10px @arctic-cyan;
+}
+
+#custom-gpu {
+  color: @pink-light;
+  text-shadow: 0 0 5px @pink-hot, 0 0 10px @pink-glow;
+}
+
+#pulseaudio {
+  color: @arctic-light;
+  text-shadow: 0 0 5px @arctic-blue, 0 0 10px @arctic-cyan;
+}
+
+#pulseaudio.muted {
+  color: alpha(@arctic-light, 0.4);
+  text-shadow: 0 0 5px @border-secondary;
+  opacity: 0.6;
+}
+
+#custom-protonvpn {
+  color: @pink-light;
+  text-shadow: 0 0 5px @pink-hot, 0 0 10px @pink-glow;
+}
+
+#custom-network {
+  color: @pink-light;
+  text-shadow: 0 0 5px @pink-hot, 0 0 10px @pink-glow;
+}
+
+#custom-bluetooth {
+  color: @arctic-light;
+  text-shadow: 0 0 5px @arctic-blue, 0 0 10px @arctic-cyan;
+}
+
+#battery {
+  color: @arctic-light;
+  text-shadow: 0 0 5px @arctic-blue, 0 0 10px @arctic-cyan;
+}
+
+#battery.charging {
+  color: @pink-light;
+  text-shadow: 0 0 5px @pink-hot, 0 0 10px @pink-glow;
+}
+
+#battery.warning {
+  color: @pink-light;
+  text-shadow: 0 0 5px @pink-hot;
+}
+
+#battery.critical {
+  color: @pink-hot;
+  text-shadow: 0 0 8px @pink-hot, 0 0 12px @pink-glow;
+}
+
+#tray {
+  padding-right: 10px;
+  color: @arctic-light;
+  text-shadow: 0 0 8px @arctic-blue;
+  border: 2px solid @border-secondary;
+}
+
+#workspaces *, #taskbar *, #clock *, #tray * {
+  color: inherit;
+  text-shadow: inherit;
+}
+
+#custom-notification {
+  color: @pink-light;
+  font-family: "NotoSansMono Nerd Font";
+  text-shadow: 0 0 5px @pink-hot, 0 0 10px @pink-glow;
+}

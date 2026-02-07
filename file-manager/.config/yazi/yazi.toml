@@ -1,0 +1,34 @@
+[manager]
+shell = "/usr/bin/zsh"
+
+[opener]
+edit = [
+	{ run = 'micro "$@"', block = true, for = "unix" },
+]
+open = [
+	{ run = 'xdg-open "$1"', orphan = true, for = "unix" },
+]
+reveal = [
+	{ run = 'xdg-open "$(dirname "$1")"', orphan = true, for = "unix" },
+]
+
+[open]
+rules = [
+	{ mime = "text/*", use = "edit" },
+	{ mime = "application/json", use = "edit" },
+	{ mime = "application/xml", use = "edit" },
+	{ mime = "application/x-shellscript", use = "edit" },
+	{ mime = "application/x-perl", use = "edit" },
+	{ mime = "application/x-ruby", use = "edit" },
+	{ mime = "application/javascript", use = "edit" },
+	{ mime = "application/toml", use = "edit" },
+	{ mime = "application/yaml", use = "edit" },
+	{ mime = "application/x-desktop", use = "edit" },
+
+	{ mime = "image/*", use = "open" },
+	{ mime = "video/*", use = "open" },
+	{ mime = "audio/*", use = "open" },
+	{ mime = "application/pdf", use = "open" },
+
+	{ mime = "*", use = "open" },
+]

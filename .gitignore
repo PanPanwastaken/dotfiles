@@ -1,0 +1,10 @@
+editors/.config/micro/backups/
+editors/.config/micro/buffers/
+editors/.config/micro/plug/
+browser/.config/qutebrowser/bookmarks/
+browser/.config/qutebrowser/qsettings/
+browser/.config/qutebrowser/autoconfig.yml
+themes/themes/.cache/
+waybar/.config/waybar/.claude/
+*.history
+*.zwc

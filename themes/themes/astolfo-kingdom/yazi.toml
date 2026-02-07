@@ -1,0 +1,128 @@
+# Astolfo Kingdom theme - Yazi colors
+[manager]
+shell = "/usr/bin/zsh"
+
+[open]
+editor = "/usr/bin/micro"
+
+[mgr]
+cwd = { fg = "#d4a030" }
+# Gold and Rose aesthetic
+
+find_keyword  = { fg = "#f0d080", bold = true, italic = true, underline = true }
+find_position = { fg = "#d4a030", bg = "reset", bold = true, italic = true }
+
+symlink_target = { fg = "#b08840", italic = true }
+
+marker_copied   = { fg = "#d4a030", bg = "#d4a030" }
+marker_cut      = { fg = "#c96878", bg = "#c96878" }
+marker_marked   = { fg = "#e8b850", bg = "#e8b850" }
+marker_selected = { fg = "#f0d080", bg = "#f0d080" }
+
+count_copied   = { fg = "#12100a", bg = "#d4a030" }
+count_cut      = { fg = "#ffffff", bg = "#c96878" }
+count_selected = { fg = "#12100a", bg = "#f0d080" }
+
+border_symbol = "\u2502"
+border_style  = { fg = "#554430" }
+
+[tabs]
+active   = { fg = "#12100a", bg = "#d4a030", bold = true }
+inactive = { fg = "#d4a030", bg = "#1e1810" }
+
+[mode]
+normal_main = { fg = "#12100a", bg = "#d4a030", bold = true }
+normal_alt  = { fg = "#d4a030", bg = "#1e1810" }
+
+select_main = { fg = "#12100a", bg = "#c96878", bold = true }
+select_alt  = { fg = "#c96878", bg = "#1e1810" }
+
+unset_main = { fg = "#12100a", bg = "#b08840", bold = true }
+unset_alt  = { fg = "#b08840", bg = "#1e1810" }
+
+[indicator]
+parent  = { reversed = true }
+current = { reversed = true }
+preview = { underline = true }
+
+[status]
+sep_left  = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+
+perm_sep   = { fg = "#554430" }
+perm_type  = { fg = "#d4a030" }
+perm_read  = { fg = "#f0d080" }
+perm_write = { fg = "#c96878" }
+perm_exec  = { fg = "#e8b850" }
+
+progress_label  = { bold = true }
+progress_normal = { fg = "#d4a030", bg = "#1e1810" }
+progress_error  = { fg = "#f0d080", bg = "#c96878" }
+
+[which]
+mask            = { bg = "#12100a" }
+cand            = { fg = "#e8b850" }
+rest            = { fg = "#554430" }
+desc            = { fg = "#e08890" }
+separator_style = { fg = "#554430" }
+
+[confirm]
+border   = { fg = "#d4a030" }
+title    = { fg = "#d4a030" }
+btn_yes  = { reversed = true }
+btn_no   = {}
+
+[spot]
+border = { fg = "#d4a030" }
+title  = { fg = "#d4a030" }
+
+tbl_col  = { fg = "#d4a030" }
+tbl_cell = { fg = "#f0d080", reversed = true }
+
+[notify]
+title_info  = { fg = "#d4a030" }
+title_warn  = { fg = "#f0d080" }
+title_error = { fg = "#c96878" }
+
+[pick]
+border   = { fg = "#d4a030" }
+active   = { fg = "#c96878", bold = true }
+inactive = {}
+
+[input]
+border   = { fg = "#d4a030" }
+title    = {}
+value    = {}
+selected = { reversed = true }
+
+[cmp]
+border   = { fg = "#d4a030" }
+active   = { reversed = true }
+inactive = {}
+
+[tasks]
+border  = { fg = "#d4a030" }
+title   = {}
+hovered = { fg = "#c96878", bold = true }
+
+[help]
+on      = { fg = "#d4a030" }
+run     = { fg = "#c96878" }
+desc    = {}
+hovered = { reversed = true, bold = true }
+footer  = { fg = "#12100a", bg = "#d4a030" }
+
+[filetype]
+rules = [
+	{ mime = "*", fg = "#f0d080" },
+	{ mime = "image/*", fg = "#f0d080" },
+	{ mime = "{audio,video}/*", fg = "#c96878" },
+	{ mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#e08890" },
+	{ mime = "application/{pdf,doc,rtf}", fg = "#d4a030" },
+	{ mime = "vfs/{absent,stale}", fg = "#554430" },
+	{ url = "*", is = "orphan", bg = "#c96878" },
+	{ url = "*", is = "exec", fg = "#e8b850" },
+	{ url = "*", is = "dummy", bg = "#c96878" },
+	{ url = "*/", is = "dummy", bg = "#c96878" },
+	{ url = "*/", fg = "#b08840" },
+]

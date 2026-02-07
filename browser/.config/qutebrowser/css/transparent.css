@@ -1,0 +1,15 @@
+/* Force JetBrains Nerd Font on all websites */
+* {
+    font-family: 'JetBrainsMono Nerd Font', monospace !important;
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar {
+    display: none !important;
+    width: 0px !important;
+    height: 0px !important;
+}
+
+* {
+    scrollbar-width: none !important;
+}

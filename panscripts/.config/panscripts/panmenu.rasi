@@ -1,0 +1,106 @@
+/**
+ * panscripts shared rofi theme
+ * Imports colors from the active theme via current.rasi
+ */
+
+@import "~/.config/rofi/colors/current.rasi"
+
+* {
+    font: "JetBrainsMono Nerd Font 11";
+}
+
+window {
+    transparency:  "real";
+    location:      center;
+    anchor:        center;
+    fullscreen:    false;
+    width:         380px;
+    border:        2px solid;
+    border-color:  @selected;
+    border-radius: 12px;
+    background-color: @background;
+}
+
+mainbox {
+    enabled:          true;
+    spacing:          8px;
+    padding:          16px;
+    background-color: transparent;
+    children:         [ "inputbar", "message", "listview" ];
+}
+
+inputbar {
+    enabled:          true;
+    spacing:          8px;
+    padding:          8px 12px;
+    border-radius:    8px;
+    background-color: @background-alt;
+    text-color:       @foreground;
+    children:         [ "prompt", "entry" ];
+}
+
+prompt {
+    enabled:          true;
+    background-color: inherit;
+    text-color:       @selected;
+}
+
+entry {
+    enabled:          true;
+    background-color: inherit;
+    text-color:       @foreground;
+    cursor:           text;
+    placeholder:      "";
+}
+
+message {
+    enabled:          true;
+    padding:          6px 12px;
+    border-radius:    8px;
+    background-color: @background-alt;
+    text-color:       @active;
+}
+
+textbox {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+listview {
+    enabled:          true;
+    columns:          1;
+    lines:            8;
+    cycle:            true;
+    dynamic:          true;
+    scrollbar:        false;
+    layout:           vertical;
+    fixed-height:     false;
+    spacing:          4px;
+    background-color: transparent;
+}
+
+element {
+    enabled:          true;
+    spacing:          10px;
+    padding:          6px 10px;
+    border-radius:    6px;
+    background-color: transparent;
+    text-color:       @foreground;
+}
+
+element selected.normal {
+    background-color: @selected;
+    text-color:       @background;
+}
+
+element-icon {
+    size:             28px;
+    cursor:           inherit;
+    background-color: transparent;
+}
+
+element-text {
+    cursor:           inherit;
+    background-color: transparent;
+    text-color:       inherit;
+}

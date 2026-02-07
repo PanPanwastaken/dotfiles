@@ -1,0 +1,27 @@
+/* Astolfo Kingdom Theme - Waybar Colors */
+@define-color bg-bar transparent;
+@define-color bg-module rgba(18, 16, 10, 0.3);
+@define-color bg-module-hover rgba(40, 35, 20, 0.3);
+
+@define-color pink-hot #d4a030;
+@define-color pink-light #f0d080;
+@define-color pink-glow #d4a030;
+@define-color arctic-blue #c96878;
+@define-color arctic-cyan #b05868;
+@define-color arctic-light #e8a0a8;
+@define-color text-main #ffffff;
+
+/* Border colors */
+@define-color border-primary rgba(212, 160, 48, 0.7);
+@define-color border-secondary rgba(212, 160, 48, 0.7);
+@define-color border-primary-bright rgba(212, 160, 48, 0.85);
+
+/* Button backgrounds */
+@define-color btn-hover-bg rgba(201, 104, 120, 0.2);
+@define-color btn-active-bg rgba(212, 160, 48, 0.25);
+@define-color btn-urgent-bg rgba(201, 104, 120, 0.85);
+
+/* Aliases for theme compatibility */
+@define-color primary #d4a030;
+@define-color secondary #c96878;
+@define-color accent #f0d080;

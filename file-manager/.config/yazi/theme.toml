@@ -1,0 +1,127 @@
+[manager]
+shell = "/usr/bin/zsh"
+
+[open]
+editor = "/usr/bin/micro"
+
+[mgr]
+cwd = { fg = "#7fdbff" }
+# Pink and Arctic Blue aesthetic
+
+find_keyword  = { fg = "#ffb3d9", bold = true, italic = true, underline = true }
+find_position = { fg = "#ff6eb4", bg = "reset", bold = true, italic = true }
+
+symlink_target = { fg = "#b490d4", italic = true }
+
+marker_copied   = { fg = "#7fdbff", bg = "#7fdbff" }
+marker_cut      = { fg = "#ff6eb4", bg = "#ff6eb4" }
+marker_marked   = { fg = "#9fefff", bg = "#9fefff" }
+marker_selected = { fg = "#ffb3d9", bg = "#ffb3d9" }
+
+count_copied   = { fg = "#0f0a14", bg = "#7fdbff" }
+count_cut      = { fg = "#ffffff", bg = "#ff6eb4" }
+count_selected = { fg = "#0f0a14", bg = "#ffb3d9" }
+
+border_symbol = "│"
+border_style  = { fg = "#443355" }
+
+[tabs]
+active   = { fg = "#0f0a14", bg = "#ff6eb4", bold = true }
+inactive = { fg = "#ff6eb4", bg = "#1a1520" }
+
+[mode]
+normal_main = { fg = "#0f0a14", bg = "#7fdbff", bold = true }
+normal_alt  = { fg = "#7fdbff", bg = "#1a1520" }
+
+select_main = { fg = "#0f0a14", bg = "#ff6eb4", bold = true }
+select_alt  = { fg = "#ff6eb4", bg = "#1a1520" }
+
+unset_main = { fg = "#0f0a14", bg = "#b490d4", bold = true }
+unset_alt  = { fg = "#b490d4", bg = "#1a1520" }
+
+[indicator]
+parent  = { reversed = true }
+current = { reversed = true }
+preview = { underline = true }
+
+[status]
+sep_left  = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+
+perm_sep   = { fg = "#443355" }
+perm_type  = { fg = "#7fdbff" }
+perm_read  = { fg = "#ffb3d9" }
+perm_write = { fg = "#ff6eb4" }
+perm_exec  = { fg = "#9fefff" }
+
+progress_label  = { bold = true }
+progress_normal = { fg = "#7fdbff", bg = "#1a1520" }
+progress_error  = { fg = "#ffb3d9", bg = "#ff6eb4" }
+
+[which]
+mask            = { bg = "#0f0a14" }
+cand            = { fg = "#9fefff" }
+rest            = { fg = "#443355" }
+desc            = { fg = "#ff8ec4" }
+separator_style = { fg = "#443355" }
+
+[confirm]
+border   = { fg = "#7fdbff" }
+title    = { fg = "#7fdbff" }
+btn_yes  = { reversed = true }
+btn_no   = {}
+
+[spot]
+border = { fg = "#7fdbff" }
+title  = { fg = "#7fdbff" }
+
+tbl_col  = { fg = "#7fdbff" }
+tbl_cell = { fg = "#ffb3d9", reversed = true }
+
+[notify]
+title_info  = { fg = "#7fdbff" }
+title_warn  = { fg = "#ffb3d9" }
+title_error = { fg = "#ff6eb4" }
+
+[pick]
+border   = { fg = "#7fdbff" }
+active   = { fg = "#ff6eb4", bold = true }
+inactive = {}
+
+[input]
+border   = { fg = "#7fdbff" }
+title    = {}
+value    = {}
+selected = { reversed = true }
+
+[cmp]
+border   = { fg = "#7fdbff" }
+active   = { reversed = true }
+inactive = {}
+
+[tasks]
+border  = { fg = "#7fdbff" }
+title   = {}
+hovered = { fg = "#ff6eb4", bold = true }
+
+[help]
+on      = { fg = "#7fdbff" }
+run     = { fg = "#ff6eb4" }
+desc    = {}
+hovered = { reversed = true, bold = true }
+footer  = { fg = "#0f0a14", bg = "#ff6eb4" }
+
+[filetype]
+rules = [
+	{ mime = "*", fg = "#ffb3d9" },
+	{ mime = "image/*", fg = "#ffb3d9" },
+	{ mime = "{audio,video}/*", fg = "#ff6eb4" },
+	{ mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#ff8ec4" },
+	{ mime = "application/{pdf,doc,rtf}", fg = "#7fdbff" },
+	{ mime = "vfs/{absent,stale}", fg = "#443355" },
+	{ url = "*", is = "orphan", bg = "#ff6eb4" },
+	{ url = "*", is = "exec", fg = "#9fefff" },
+	{ url = "*", is = "dummy", bg = "#ff6eb4" },
+	{ url = "*/", is = "dummy", bg = "#ff6eb4" },
+	{ url = "*/", fg = "#b490d4" },
+]

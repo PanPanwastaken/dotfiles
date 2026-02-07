@@ -1,0 +1,139 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 12,
+  "spacing": 1,
+
+  "modules-left": [
+    "clock",
+    "hyprland/workspaces"
+  ],
+
+  "modules-center": [
+    "wlr/taskbar"
+  ],
+
+  "modules-right": [
+    "group/right"
+  ],
+
+  "group/right": {
+    "orientation": "horizontal",
+    "modules": [
+      "pulseaudio",
+      "backlight",
+      "battery",
+      "cpu",
+      "memory",
+      "custom/gpu",
+      "custom/protonvpn",
+      "custom/network",
+      "custom/bluetooth",
+      "custom/notification"
+    ]
+  },
+
+  "clock": {
+    "format": "󰥔 {:%H:%M}",
+    "tooltip-format": "{:%A, %d %B %Y}"
+  },
+
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "format": "{icon}",
+    "format-icons": {
+      "default": " 󰝥 ",
+      "icon-size": 1,
+      "active": " :3 "
+    },
+    "ignore-workspaces": ["99"]
+  },
+
+  "wlr/taskbar": {
+    "format": "󰣆 {app_id} ",
+    "icon-size": 0.8,
+    "tooltip-format": "{app_id}: {title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "app_ids-mapping": {
+      "org.qutebrowser.qutebrowser": "qutie"
+    },
+    "ignore-list": [
+      "homescreen-astolfo",
+      "homescreen-cava",
+      "homescreen-hackernews",
+      "homescreen-nowplaying",
+      "homescreen-gotop",
+      "homescreen-nvtop",
+      "homescreen-astroterm",
+      "homescreen-tasks"
+    ]
+  },
+
+  "pulseaudio": {
+    "format": " 󰕾 {volume}% ",
+    "format-muted": " 󰝟 muted "
+  },
+
+  "backlight": {
+    "format": " 󰃠 {percent}% ",
+    "on-scroll-up": "brightnessctl set +5%",
+    "on-scroll-down": "brightnessctl set 5%-"
+  },
+
+  "battery": {
+    "interval": 30,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": " 󰁹 {capacity}% ({time}) ",
+    "format-charging": " 󰂄 {capacity}% ({time}) ",
+    "format-plugged": " 󰚥 {capacity}% ",
+    "format-full": " 󰁹 Full ",
+    "format-time": "{H}h {M}m",
+    "tooltip-format": "{timeTo}"
+  },
+
+  "cpu": {
+    "format": " 󰍛 {usage}% "
+  },
+
+  "memory": {
+    "format": " 󰍛 {used:0.1f}G "
+  },
+
+  "custom/gpu": {
+    "exec": "/home/panpan/.config/waybar/scripts/gpu_status.sh",
+    "interval": 5,
+    "format": " 󰢮 {} ",
+    "tooltip": false
+  },
+
+  "custom/protonvpn": {
+    "exec": "/home/panpan/.config/waybar/scripts/protonvpn_status.sh",
+    "interval": 5,
+    "format": " 󰦝 {} ",
+    "on-click": "protonvpn-app"
+  },
+
+  "custom/network": {
+    "exec": "/home/panpan/.config/waybar/scripts/network_status.sh",
+    "interval": 5,
+    "format": " 󰖩 {} "
+  },
+
+  "custom/bluetooth": {
+    "exec": "/home/panpan/.config/waybar/scripts/bluetooth_battery.sh",
+    "interval": 30,
+    "format": " 󰂯 {} ",
+    "on-click": "blueman-manager"
+  },
+
+  "custom/notification": {
+    "format": " 󰂜 ",
+    "tooltip-format": "Notifications",
+    "on-click": "~/.config/mako/scripts/notif-menu.sh",
+    "on-click-right": "makoctl dismiss -a"
+  }
+}

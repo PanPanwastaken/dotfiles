@@ -1,0 +1,10 @@
+/* Astolfo theme - Rofi colors */
+* {
+    background:     #0f0a14FF;
+    background-alt: #1a1520FF;
+    background-dim: #0f0a14B3;
+    foreground:     #FFFFFFFF;
+    selected:       #ff6eb4FF;
+    active:         #7fdbffFF;
+    urgent:         #ff5555FF;
+}

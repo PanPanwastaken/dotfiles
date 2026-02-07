@@ -1,0 +1,36 @@
+/* PiP player: fullscreen video, hide everything else */
+#page-manager, #masthead-container, #related, #comments,
+#info, #meta, #secondary, #below, ytd-masthead,
+ytd-mini-guide-renderer, #guide-button, #chips-wrapper,
+.ytd-watch-flexy #secondary, #description, tp-yt-app-drawer,
+#content-separator, #header, ytd-watch-metadata,
+#above-the-fold, #bottom-row, ytd-merch-shelf-renderer,
+ytd-engagement-panel-section-list-renderer,
+#subscribe-button, #top-row, #owner, #actions,
+ytd-watch-next-secondary-results-renderer {
+    display: none !important;
+}
+
+#movie_player, .html5-video-container, video {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: 9999 !important;
+}
+
+#player-theater-container, #player-container-outer,
+#player-container-inner, #player, #player-full-bleed-container,
+ytd-player, #ytd-player {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    max-height: none !important;
+    min-height: 100vh !important;
+    z-index: 9999 !important;
+}
+
+body { overflow: hidden !important; background: #000 !important; }

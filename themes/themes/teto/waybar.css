@@ -1,0 +1,28 @@
+/* Teto Theme - Waybar Colors */
+@define-color bg-bar transparent;
+@define-color bg-module rgba(30, 10, 10, 0.3);
+@define-color bg-module-hover rgba(60, 20, 20, 0.3);
+
+/* Teto: Red primary, White/cream secondary */
+@define-color pink-hot #e63946;
+@define-color pink-light #ff6b6b;
+@define-color pink-glow #e63946;
+@define-color arctic-blue #f1faee;
+@define-color arctic-cyan #ffffff;
+@define-color arctic-light #f1faee;
+@define-color text-main #ffffff;
+
+/* Border colors - unified red for teto */
+@define-color border-primary rgba(230, 57, 70, 0.7);
+@define-color border-secondary rgba(230, 57, 70, 0.7);
+@define-color border-primary-bright rgba(230, 57, 70, 0.85);
+
+/* Button backgrounds */
+@define-color btn-hover-bg rgba(241, 250, 238, 0.2);
+@define-color btn-active-bg rgba(230, 57, 70, 0.25);
+@define-color btn-urgent-bg rgba(230, 57, 70, 0.85);
+
+/* Aliases for theme compatibility */
+@define-color primary #e63946;
+@define-color secondary #f1faee;
+@define-color accent #ff6b6b;

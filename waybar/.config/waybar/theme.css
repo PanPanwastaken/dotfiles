@@ -1,0 +1,23 @@
+@define-color bg-bar transparent;
+@define-color bg-module rgba(20, 10, 30, 0.3);
+@define-color bg-module-hover rgba(50, 30, 70, 0.3);
+
+@define-color pink-hot #ff6eb4;
+@define-color pink-light #ffb3d9;
+@define-color pink-glow #ff69b4;
+@define-color arctic-blue #7fdbff;
+@define-color arctic-cyan #00d4ff;
+@define-color arctic-light #b4f0ff;
+@define-color text-main #ffffff;
+
+@define-color border-primary rgba(255, 110, 180, 0.7);
+@define-color border-secondary rgba(255, 110, 180, 0.7);
+@define-color border-primary-bright rgba(255, 110, 180, 0.85);
+
+@define-color btn-hover-bg rgba(127, 219, 255, 0.2);
+@define-color btn-active-bg rgba(255, 110, 180, 0.25);
+@define-color btn-urgent-bg rgba(255, 110, 180, 0.85);
+
+@define-color primary #ff6eb4;
+@define-color secondary #7fdbff;
+@define-color accent #ffb3d9;

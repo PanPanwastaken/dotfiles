@@ -1,0 +1,41 @@
+color-link default "#f1faee,rgba(0,0,0,0.5)"
+color-link background ",rgba(0,0,0,0.5)"
+
+color-link comment "#cc2936,rgba(0,0,0,0.5)"
+color-link identifier "#ffffff,rgba(0,0,0,0.5)"
+
+color-link constant "#e63946,rgba(0,0,0,0.5)"
+color-link constant.number "#f1faee,rgba(0,0,0,0.5)"
+color-link constant.string "#ff6b6b,rgba(0,0,0,0.5)"
+color-link constant.string.char "#ffffff,rgba(0,0,0,0.5)"
+
+color-link statement "#e63946,rgba(0,0,0,0.5)"
+color-link preproc "#f1faee,rgba(0,0,0,0.5)"
+color-link type "#f1faee,rgba(0,0,0,0.5)"
+color-link special "#e63946,rgba(0,0,0,0.5)"
+
+color-link underlined "#ff6b6b,rgba(0,0,0,0.5)"
+color-link error "bold #e63946,rgba(0,0,0,0.5)"
+color-link todo "bold #f1faee,rgba(0,0,0,0.5)"
+
+color-link hlsearch "#1a0a0a,#e63946"
+color-link indent-char "#404040,rgba(0,0,0,0.5)"
+color-link line-number "#f1faee,rgba(0,0,0,0.5)"
+color-link current-line-number "#e63946,#1a0a0a"
+
+color-link statusline "#e63946,#1a0a0a"
+color-link tabbar "#f1faee,#1a0a0a"
+
+color-link diff-added "#f1faee"
+color-link diff-modified "#ff6b6b"
+color-link diff-deleted "#e63946"
+
+color-link gutter-error "#e63946,rgba(0,0,0,0.5)"
+color-link gutter-warning "#f1faee,rgba(0,0,0,0.5)"
+
+color-link color-column "rgba(230,57,70,0.1)"
+color-link symbol "#f1faee,rgba(0,0,0,0.5)"
+color-link match-brace "rgba(0,0,0,0.5),#e63946"
+
+color-link tab-error "#e63946"
+color-link trailingws "#e63946"

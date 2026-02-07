@@ -1,0 +1,108 @@
+* {
+    bg-dark: rgba(10, 8, 12, 0.92);
+
+    /* Astolfo theme colors */
+    pink: #ff6eb4;
+    arctic: #7fdbff;
+    pink-soft: rgba(255, 110, 180, 0.65);
+    arctic-soft: rgba(127, 219, 255, 0.45);
+    pink-faint: rgba(255, 110, 180, 0.22);
+    arctic-faint: rgba(127, 219, 255, 0.18);
+
+    fg: rgba(255, 255, 255, 0.85);
+    fg-soft: rgba(255, 255, 255, 0.65);
+
+    background-color: transparent;
+    text-color: @fg;
+    font: "JetBrainsMono Nerd Font 10";
+}
+
+configuration {
+    show-icons: false;
+    display-drun: "Apps";
+}
+
+window {
+    fullscreen: true;
+    background-color: @bg-dark;
+
+    border: 1px solid;
+    border-color: @pink-faint;
+    border-radius: 0px;
+}
+
+mainbox {
+    background-color: transparent;
+    children: [inputbar, listview];
+    padding: 20px 25%;
+    spacing: 10px;
+}
+
+inputbar {
+    background-color: rgba(20, 16, 20, 0.6);
+    padding: 10px 14px;
+    border-radius: 10px;
+
+    border: 1px solid;
+    border-color: @arctic-faint;
+
+    children: [prompt, entry];
+}
+
+prompt {
+    background-color: transparent;
+    text-color: @pink;
+    padding: 0px 8px 0px 0px;
+    font: "JetBrainsMono Nerd Font Bold 11";
+}
+
+entry {
+    background-color: transparent;
+    text-color: @fg;
+    placeholder-color: rgba(255, 255, 255, 0.3);
+}
+
+listview {
+    background-color: transparent;
+    lines: 10;
+    spacing: 4px;
+    padding: 8px 0px 0px 0px;
+    scrollbar: true;
+}
+
+scrollbar {
+    background-color: rgba(127, 219, 255, 0.08);
+    handle-color: @arctic-soft;
+    width: 4px;
+    border-radius: 50px;
+}
+
+element {
+    background-color: transparent;
+    text-color: @fg-soft;
+    padding: 8px 10px;
+    border-radius: 8px;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+}
+
+element normal.normal {
+    background-color: transparent;
+}
+
+element alternate.normal {
+    background-color: rgba(127, 219, 255, 0.03);
+}
+
+element selected.normal {
+    background-color: rgba(255, 110, 180, 0.18);
+    text-color: @pink;
+}
+
+element selected.normal element-text {
+    text-color: @pink;
+    font: "JetBrainsMono Nerd Font Bold 10";
+}
